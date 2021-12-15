@@ -1,0 +1,42 @@
+.start-page {
+  margin: 0 auto;
+  background: url("/src/assets/bg.jpg") no-repeat center;
+  background-size: cover;
+  min-height: calc(100vh - 100px);
+}
+
+.start-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+  width: 40rem;
+  min-width: 30rem;
+  height: 20rem;
+  backdrop-filter: blur(31px);
+  border-radius: 30px;
+}
+
+.start-div__title {
+  @include block-title();
+  font-size: 2.5rem;
+  padding: 20px;
+}
+
+.start-btn {
+  @include font-regular-text();
+  background-color: unset;
+  cursor: pointer;
+  backdrop-filter: blur(31px);
+  border-radius: 30px;
+  padding: 16px 80px;
+  margin: 25px 0 25px;
+}

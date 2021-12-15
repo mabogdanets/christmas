@@ -1,0 +1,39 @@
+footer {
+  margin: 0 auto;
+  background-color: $color-bg-dark-blue; 
+}
+
+.footer-wrapper { 
+  height: 50px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+.footer__info>li {
+  padding: 5px 5px;  
+}
+
+.info__link {
+  @include font-regular-text();
+  &:hover {
+    color: $color-light-blue;
+  }
+}
+
+.rss-link__ico {
+  background-image: url("/src/assets/svg/rss.svg");
+  display: inline-block;
+  width: 100px;
+  height: 37px;
+  background-size: cover;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
