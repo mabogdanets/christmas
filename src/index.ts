@@ -1,5 +1,6 @@
 import './style.scss';
 import './ts/toys';
+import './ts/data';
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');
 document.body.innerHTML = `

@@ -1,4 +1,20 @@
-const data = [
+type Shape = 'шар' |'фигурка'|'колокольчик'|'шишка'|'снежинка';
+type Color = 'белый'|'желтый'|'красный'|'синий'|'зелёный';
+type Size = 'большой'|'средний'|'малый';
+
+export type Toy = {
+  num: string,
+  name: string,
+  count: string,
+  year: string,
+  shape: Shape,
+  color: Color,
+  size: Size,
+  favorite: boolean,
+}
+
+export const data: Toy[] = [
+  
   {
     num: '1',
     name: 'Большой шар с рисунком',
@@ -470,7 +486,7 @@ const data = [
     favorite: false,
   },
   {
-    num: '48',
+    num: '48', 
     name: 'Желтый шар с бантом',
     count: '6',
     year: '1960',
@@ -600,5 +616,3 @@ const data = [
     favorite: true,
   },
 ];
-
-export default data;
