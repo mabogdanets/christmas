@@ -1,0 +1,35 @@
+
+#slider .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px; /* half the width */
+  border-radius: 9px;
+}
+.filter__amount {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  align-items: center;
+}
+output {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 20px;
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  border: 1px solid #278D9F;
+}
+
+#slider {
+  height: 10px;
+}
+
+#slider .noUi-connect {
+  background: $color-light-blue;
+}
+#slider .noUi-handle::after,
+#slider .noUi-handle::before {
+  display: none;
+}

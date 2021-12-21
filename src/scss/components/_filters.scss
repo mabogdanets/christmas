@@ -1,0 +1,174 @@
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5em;
+  height: 200px;
+  width: 100%;
+}
+.filter {
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);  
+  padding: 10px;
+}
+.filter__title {
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 7px;
+  border-bottom: 2px solid $color-blue;
+}
+.filter__property, 
+.filter__sort,
+.fiter__range {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter__shape, 
+.filter__color, 
+.filter__size, 
+.filter__favorite {
+  display: flex;
+  align-items: center;
+}
+
+.filter__shape button{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  &:nth-child(2) {
+    margin-left: 10px;
+    background-image: url("/src/assets/svg/ball.svg");
+  } 
+  &:nth-child(3) {
+    background-image: url("/src/assets/svg/bell.svg");
+  } 
+  &:nth-child(4) {
+    background-image: url("/src/assets/svg/cone.svg");
+  } 
+  &:nth-child(5) {
+    background-image: url("/src/assets/svg/snowflake.svg");
+  } 
+  &:nth-child(6) {
+    background-image: url("/src/assets/svg/toy.svg");
+  } 
+  &.active {
+    filter: invert(40%) sepia(53%)  brightness(100%);
+  }
+}
+
+.filter__color button{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  &:nth-child(2){
+    margin-left: 10px;
+    background-color: white;
+  }
+  &:nth-child(3){
+    background-color: yellow;
+  }
+  &:nth-child(4){
+    background-color: red;
+  }
+  &:nth-child(5){
+    background-color: blue;
+  }
+  &:nth-child(6){
+    background-color: rgb(0, 199, 0);
+  }
+  &.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+  }
+  &.active:nth-child(2)::after,
+  &.active:nth-child(3)::after {
+    border: solid rgb(158, 157, 157);
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+  }
+}
+.filter__size button{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/src/assets/svg/ball.svg");
+  cursor: pointer;
+
+  &:nth-child(3){
+    width: 30px;
+    height: 30px;
+  }
+  &:nth-child(4){
+    width: 25px;
+    height: 25px;
+  }
+  &.active {
+    filter: invert(40%) sepia(53%)  brightness(100%);
+  }
+}
+
+.filter__favorite .favorite__input{
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px 5px 10px;
+}
+
+.sort-select {
+  align-self: center;
+  color: $color-white;
+  font: inherit;
+  width: 300px;
+  height: 40px;
+  padding: 5px 25px;  
+  margin-top: 25px;
+  border-radius: 20px;
+  border: 1px solid #278D9F;
+  background-color: $color-blue;
+  cursor: pointer;
+}
+
+.sort-select option {
+  color: inherit;
+  background-color: rgba(31, 112, 127);
+  border: unset;
+}
+
+
+.filter__reset {
+  align-self: center;
+  color: $color-white;
+  font: inherit;
+  width: 300px;
+  height: 40px;
+  padding: 5px 25px;  
+  border-radius: 20px;
+  border: 1px solid #278D9F;
+  background-color: $color-blue;
+  margin-top: 25px;
+  cursor: pointer;  
+}

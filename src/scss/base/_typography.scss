@@ -13,9 +13,9 @@
   @include font-base();
   font-size: 1.8rem;
 }
-@mixin block-title() {
+@mixin block-title(){
   @include font-base();
-  line-height: 22px;
   @include font-uppercase();
+  line-height: 22px;
+  font-size: 2rem;
 }
-

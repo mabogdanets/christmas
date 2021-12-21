@@ -1,6 +1,6 @@
-type Shape = 'шар' |'фигурка'|'колокольчик'|'шишка'|'снежинка';
-type Color = 'белый'|'желтый'|'красный'|'синий'|'зелёный';
-type Size = 'большой'|'средний'|'малый';
+export type Shape = 'шар' |'фигурка'|'колокольчик'|'шишка'|'снежинка';
+export type Color = 'белый'|'желтый'|'красный'|'синий'|'зелёный';
+export type Size = 'большой'|'средний'|'малый';
 
 export type Toy = {
   num: string,
@@ -11,6 +11,7 @@ export type Toy = {
   color: Color,
   size: Size,
   favorite: boolean,
+  toyCard?: HTMLElement,
 }
 
 export const data: Toy[] = [

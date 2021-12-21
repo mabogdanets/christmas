@@ -26,8 +26,10 @@
 }
 
 .start-div__title {
-  @include block-title();
+  @include font-base();
+  @include font-uppercase();
   font-size: 2.5rem;
+  line-height: 22px;
   padding: 20px;
 }
 

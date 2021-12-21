@@ -52,29 +52,59 @@
       <div class="wrapper toys-page-wrapper">
         <div class="filters">
           <div class="filter filter__property">
-            
+            <h2 class="filter__title">Фильтр по значению</h2>            
+            <div class="filter__shape">
+              <p>Форма:</p>
+              <button class="filter__button" data-filter="shape" data-value="шар"></button>
+              <button class="filter__button" data-filter="shape" data-value="колокольчик"></button>
+              <button class="filter__button" data-filter="shape" data-value="шишка"></button>
+              <button class="filter__button" data-filter="shape" data-value="снежинка"></button>
+              <button class="filter__button" data-filter="shape" data-value="фигурка"></button>
+            </div>
+            <div class="filter__color">
+              <p>Цвет:</p>
+              <button class="filter__button" data-filter="color" data-value="белый"></button>
+              <button class="filter__button" data-filter="color" data-value="желтый"></button>
+              <button class="filter__button" data-filter="color" data-value="красный"></button>
+              <button class="filter__button" data-filter="color" data-value="синий"></button>
+              <button class="filter__button" data-filter="color" data-value="зеленый"></button>
+            </div>
+            <div class="filter__size">
+              <p>Размер:</p>
+              <button class="filter__button" data-filter="size" data-value="большой"></button>
+              <button class="filter__button" data-filter="size" data-value="средний"></button>
+              <button class="filter__button" data-filter="size" data-value="малый"></button>
+            </div>
+            <div class="filter__favorite">
+              <p>Только любимые:</p>
+              <div class="filter__checkbox">
+                <input type="checkbox" class="favorite__input" id="favorite">
+                <label for="favorite" class="favorite__label"></label>
+              </div>
+            </div>
           </div>
           <div class="filter filter__range">
-
+            <h2 class="filter__title">Фильтр по диапозону</h2>
+            <p>Количество экземпляров:</p>
+            <div class="filter__amount">
+              <output class="amount-slider__output"></output>
+              <div id="slider"></div>
+              <output class="amount-slider__output"></output>
+            </div>
+              <p>Год приобретения:</p>
           </div>
           <div class="filter filter__sort">
-
+            <h2 class="filter__title">Сортировка</h2>
+            <select class= "sort-select" id="sort-select" name="sort-select">
+              <option value="name_incr">по названию: А до Я</option>
+              <option value="name_decr">по названию: Я до А</option>
+              <option value="year_decr">по году покупки: по убыванию</option>
+              <option value="year_incr">по году покупки: по возрастанию</option>
+            </select>   
+            <input class="filter__reset" type="button" value="Сбросить фильтры">     
           </div>
         </div>
         <div class="toys">
-          <div class="toy">
-            <h3 class="toy__name">Большой шар с рисунком</h3>
-            <img class="toy__img" src="/assets/toys/1.png" alt="toy">
-            <div class="toy__description">
-              <p class="toy__count">Количество:  <span class="toy__info">5</span></p>
-              <p class="toy__year">Год покупки:  <span class="toy__info">1768</span></p> 
-              <p class="toy__form">Форма:  <span class="toy__info">шар</span></p>
-              <p class="toy__color">Цвет:  <span class="toy__info">желтый</span></p>
-              <p class="toy__size">Размер:  <span class="toy__info">большая</span></p>
-              <p class="toy__favorite">Любимая: <span class="toy__info">нет</span></p>
-            </div>
-            <div class="toy__bookmark"></div>
-          </div>
         </div>
       </div>
     </div>
