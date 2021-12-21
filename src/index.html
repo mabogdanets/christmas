@@ -28,13 +28,11 @@
           </li>
         </ul>
       </nav>
-      <div class="search">
-        <div class="search-wrapper">
-          <div class="search__items">
-            <input type="text" id="search__input" class = "search__input">
-            <span class="search__favorites"></span>
-          </div>
-        </div>
+      <div class="search-marked">
+        <input type="text" id="search__input" class = "search__input">
+        <div class="marked-div">
+          <span class="marked-div__count">0</span>
+        </div>        
       </div>
     </div>
   </header>
@@ -87,9 +85,9 @@
             <h2 class="filter__title">Фильтр по диапозону</h2>
             <p>Количество экземпляров:</p>
             <div class="filter__amount">
-              <output class="amount-slider__output"></output>
+              <output class="amount__output_left"></output>
               <div id="slider"></div>
-              <output class="amount-slider__output"></output>
+              <output class="amount__output_right"></output>
             </div>
               <p>Год приобретения:</p>
           </div>

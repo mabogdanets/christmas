@@ -19,7 +19,7 @@
 }
 .filter__property, 
 .filter__sort,
-.fiter__range {
+.filter__range {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -136,6 +136,11 @@
   width: 20px;
   height: 20px;
   margin: 5px 5px 5px 10px;
+}
+
+.filter__range {
+  justify-content: space-between;
+
 }
 
 .sort-select {

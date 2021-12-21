@@ -3,6 +3,8 @@ import './ts/toys';
 import './ts/data';
 import './ts/filters';
 import './ts/sliders';
+import './ts/marked';
+
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');
 document.body.innerHTML = `

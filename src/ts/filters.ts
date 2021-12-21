@@ -1,4 +1,4 @@
-import { data, Toy, Color, Shape, Size } from "./data";
+import { data, Toy } from "./data";
 import { toysDiv } from "./toys";
 
 const favoriteCheckbox = document.getElementById('favorite') as HTMLInputElement;
@@ -13,7 +13,6 @@ const valueFilters = {
 type ValueFilters = typeof valueFilters;
 
 let favoriteFilter: boolean = false;
-
 let sortIncr: boolean = true;
 
 function filterCards(): void {

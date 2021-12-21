@@ -38,7 +38,10 @@ header {
   }
 }
 
-/// search
+.search-marked {
+  display: flex;
+  align-items: center;
+}
 .search__input {
   width: 250px;
   height: 30px;
@@ -53,4 +56,27 @@ header {
   background-position: 215px center;
   @include font-regular-text;
   font-size: 1.6rem;
+}
+.marked-div {
+  width: 48px;
+  height: 60px;
+  background-image: url("/src/assets/svg/ball-2.svg");
+  background-size: 48px 60px;
+  background-position: left -8px;
+  background-repeat: no-repeat;
+  transition: .3s;
+}
+
+.marked-div__count {
+  display: inline-block;
+  min-width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 4px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  background-color: rgba(31, 112, 127, 0.7);
+  font-weight: 700;
 }

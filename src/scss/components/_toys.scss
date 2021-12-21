@@ -71,7 +71,17 @@
       right: -15px;
     }
 }
+.toy.marked .toy__bookmark {
+  background-color: rgb(203, 183, 122);
+  &::before {
+    border-bottom: 8px solid  rgb(126, 113, 75);
+  }
+  &::after {
+    border-left: 15px solid rgb(203, 183, 122);
+  }
+}
 
 .toy_disabled {
   display: none;
+
 }
