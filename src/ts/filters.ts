@@ -1,4 +1,5 @@
 import { data, Toy } from "./data";
+import { amountArr } from "./sliders";
 import { toysDiv } from "./toys";
 
 const favoriteCheckbox = document.getElementById('favorite') as HTMLInputElement;
@@ -9,6 +10,7 @@ const valueFilters = {
   shape: new Set(),
   color: new Set(),
   size: new Set(),
+  year: [amountArr[0], amountArr[1]],
 }
 type ValueFilters = typeof valueFilters;
 
