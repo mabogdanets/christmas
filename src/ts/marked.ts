@@ -6,15 +6,18 @@ let markedNumber: number = 0;
 
 document.querySelectorAll('.toy').forEach(el => {
   el.addEventListener('click', function() {
-    if (!el.classList.contains('marked')) {
-      markedNumber += 1;
-      el.classList.add('marked');
-      markedCountSpan.textContent = markedNumber.toString();
+    if (markedNumber > 20) {
+      alert("Извините, все слоты заполнены");
     } else {
-      el.classList.remove('marked');
-      markedNumber -= 1;
-      markedCountSpan.textContent = markedNumber.toString();
+      if (!el.classList.contains('marked')) {
+        markedNumber += 1;
+        el.classList.add('marked');
+        markedCountSpan.textContent = markedNumber.toString();
+      } else {
+        el.classList.remove('marked');
+        markedNumber -= 1;
+        markedCountSpan.textContent = markedNumber.toString();
+      }      
     }
-
   });
 });

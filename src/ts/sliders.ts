@@ -1,52 +1,46 @@
 import * as noUiSlider from 'nouislider';
 import { target, API } from "nouislider"; 
 import 'nouislider/dist/nouislider.css';
+//import { filterCards } from './filters';
+export var slider = <target>document.getElementById('slider') as noUiSlider.target;
+export var sliderAmount = <target>document.getElementById('slider-amount') as noUiSlider.target;
 
-var slider = <target>document.getElementById('slider');
-const amountOutputLeft = document.getElementById('amount__output_left') as HTMLInputElement;
-const amountOutputRight = document.getElementById('amount__output_right') as HTMLInputElement;
+export const yearOutputLeft = document.getElementById('year__output_left') as HTMLInputElement;
+export const yearOutputRight = document.getElementById('year__output_right') as HTMLInputElement;
+let sliderArr = [yearOutputLeft, yearOutputRight];
+export let yearArr: number[] = [];
 
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [1940, 2020],
     connect: true,
     range: {
-        'min': 0,
-        'max': 100
+        'min': 1940,
+        'max': 2020
     }
 });
+(slider.noUiSlider as noUiSlider.API).on('update', function (values:number[], handle:number) {
+    yearArr[handle] = Math.round(values[handle]);
+    sliderArr[handle].innerHTML = Math.round(values[handle]).toString();
+   // filterCards();
+});
 
-/*
-// Append the option elements
-for (var i = -20; i <= 40; i++) {
 
-    var option = document.createElement("option") as HTMLOptionElement;
-    option.text = i.toString();
-    option.value = i.toString();
+export const amountOutputLeft = document.getElementById('amount__output_left') as HTMLInputElement;
+export const amountOutputRight = document.getElementById('amount__output_right') as HTMLInputElement;
+let sliderArrAmount = [amountOutputLeft, amountOutputRight];
+export let amountArr: number[] = [];
 
-    slider.appendChild(option);
-}*/
-
-/*
-var inputNumber = document.getElementById('input-number');
-
-slider.noUiSlider.on('update', function (values, handle) {
-
-    var value = values[handle];
-
-    if (handle) {
-        amountOutputRight.value = value.toString();
-    } else {
-        amountOutputLeft.value = Math.round(Number(value)).toString();
+noUiSlider.create(sliderAmount, {
+    start: [1, 12],
+    connect: true,
+    range: {
+        'min': 1,
+        'max': 12
     }
 });
-
-amountOutputLeft.addEventListener('change', function () {
-    slider.noUiSlider.set([this.value, null]);
+(sliderAmount.noUiSlider as noUiSlider.API).on('update', function (values:number[], handle:number) {
+    amountArr[handle] = Math.round(values[handle]);
+    sliderArrAmount[handle].innerHTML = Math.round(values[handle]).toString();
+   // filterCards();
 });
 
-amountOutputRight.addEventListener('change', function () {
-    slider.noUiSlider.set([null, this.value]);
-});
-
-
-export default slider;*/

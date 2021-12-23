@@ -1,16 +1,20 @@
 import { data, Toy } from "./data";
-import { amountArr } from "./sliders";
+import { slider, yearArr } from "./sliders";
 import { toysDiv } from "./toys";
 
 const favoriteCheckbox = document.getElementById('favorite') as HTMLInputElement;
 const filtrProperty = document.querySelector('.filter__property');
+const filterButtons = document.querySelectorAll('.filter__button');
 const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
+const resetFilters = document.querySelector('.filter__reset') as HTMLElement;
+const noUiBbase =  document.querySelector('.noUi-base');
+const noUiTouch =  document.querySelector('.noUi-touch-area');
 
+//let yearArr = [yearArr[0], yearArr[1]];
 const valueFilters = {
   shape: new Set(),
   color: new Set(),
-  size: new Set(),
-  year: [amountArr[0], amountArr[1]],
+  size: new Set(), 
 }
 type ValueFilters = typeof valueFilters;
 
@@ -23,6 +27,7 @@ function filterCards(): void {
       (valueFilters.shape.has(toy.shape) || valueFilters.shape.size === 0) &&
       (valueFilters.color.has(toy.color) || valueFilters.color.size === 0) &&
       (valueFilters.size.has(toy.size) || valueFilters.size.size === 0) &&
+      (Number(toy.year) >= yearArr[0]) && (Number(toy.year) <= yearArr[1]) &&
       (!favoriteFilter || toy.favorite)
     ) {
       toy.toyCard.classList.remove('toy_disabled');
@@ -75,7 +80,30 @@ favoriteCheckbox.addEventListener('change', () => {
   filterCards();
 });
 
-
 sortSelect.addEventListener('change', () => {
   sortCards();
+});
+
+noUiBbase.addEventListener('mousedown', () => {
+  filterCards();
+});
+noUiTouch.addEventListener('mousedown', () => {
+  filterCards();
+});
+
+resetFilters.addEventListener('click', () => {
+  favoriteFilter = false;
+  valueFilters.shape.clear();
+  valueFilters.color.clear();
+  valueFilters.size.clear();
+
+  filterCards();
+
+  favoriteCheckbox.checked = false;
+  filterButtons.forEach(el => {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+    } 
+  });
+
 });
