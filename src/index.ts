@@ -4,6 +4,7 @@ import './ts/data';
 import './ts/filters';
 import './ts/sliders';
 import './ts/marked';
+import './ts/search';
 
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');

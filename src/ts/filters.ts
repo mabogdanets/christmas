@@ -11,14 +11,14 @@ const noUiBbase =  document.querySelector('.noUi-base');
 const noUiTouch =  document.querySelector('.noUi-touch-area');
 
 //let yearArr = [yearArr[0], yearArr[1]];
-const valueFilters = {
+export const valueFilters = {
   shape: new Set(),
   color: new Set(),
   size: new Set(), 
 }
 type ValueFilters = typeof valueFilters;
 
-let favoriteFilter: boolean = false;
+export let favoriteFilter: boolean = false;
 let sortIncr: boolean = true;
 
 function filterCards(): void {
@@ -47,6 +47,7 @@ function sortCards(): void {
     }
     return sortIncr ? 1 : -1;
   });
+
   toysDiv.innerHTML = '';
 
   for (let toy of data) {

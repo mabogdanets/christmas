@@ -4,6 +4,9 @@
   font-style: normal;
   color: $color-white;
 }
+.font-base {
+  @include font-base();
+}
 @mixin font-uppercase() {
   font-style: normal;
   font-weight: 500;
