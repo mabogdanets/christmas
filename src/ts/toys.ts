@@ -24,6 +24,7 @@ function makeCard (card: Toy): HTMLElement {
   const bookmark = document.createElement('div');
 
   toy.classList.add('toy');
+  toy.setAttribute('num', card.num);
 
   h3.classList.add('toy__name');
   h3.textContent = card.name;
@@ -72,7 +73,7 @@ function makeCard (card: Toy): HTMLElement {
   return toy;
 }
 
-function makeCards (data: Toy[]): void{
+function makeCards (data: Toy[]): void {
   for(let i=0; i<data.length; i++) {
     if (i % 5 === 0) {
       setTimeout(()=>{}, 0);

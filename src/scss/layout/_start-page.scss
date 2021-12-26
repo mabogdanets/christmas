@@ -1,11 +1,12 @@
-.start-page {
+.start-page,
+.tree-page {
   margin: 0 auto;
   background: url("/src/assets/bg.jpg") no-repeat center;
   background-size: cover;
   min-height: calc(100vh - 100px);
 }
 
-.start-page-wrapper {
+.start-page-wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;

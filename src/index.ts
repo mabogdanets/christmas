@@ -5,6 +5,9 @@ import './ts/filters';
 import './ts/sliders';
 import './ts/marked';
 import './ts/search';
+import './ts/tree-toys-settings';
+import { makeSlots } from './ts/tree-toys-settings';
+import './ts/tree;'
 
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');
@@ -23,16 +26,31 @@ const treePageBtn = document.querySelector('.tree-page-btn');
 function gotoToys(){
   if(toysPage.classList.contains('hide')) {
     toysPage.classList.remove('hide');
-    if(!startPage.classList.contains('hide')) { startPage.classList.add('hide'); };
-    if(!treePage.classList.contains('hide')) { treePage.classList.add('hide'); };
+    if(!startPage.classList.contains('hide')) {
+       startPage.classList.add('hide'); 
+       startPageBtn.classList.remove('active');
+      };
+    if(!treePage.classList.contains('hide')) { 
+      treePage.classList.add('hide'); 
+      treePageBtn.classList.remove('active');
+    };
+    toysPageBtn.classList.add('active');
   }
 }
 
 startPageBtn.addEventListener('click', () => {
   if(startPage.classList.contains('hide')) {
     startPage.classList.remove('hide');
-    if(!toysPage.classList.contains('hide')) { toysPage.classList.add('hide'); };
-    if(!treePage.classList.contains('hide')) { treePage.classList.add('hide'); };
+    startPageBtn.classList.add('active');
+
+    if(!toysPage.classList.contains('hide')) { 
+      toysPage.classList.add('hide'); 
+      toysPageBtn.classList.remove('active');
+    };    
+    if(!treePage.classList.contains('hide')) { 
+      treePage.classList.add('hide'); 
+      treePageBtn.classList.remove('active');
+    };
   }
 });
 
@@ -42,8 +60,16 @@ toysPageBtn.addEventListener('click',() => { gotoToys();} );
 treePageBtn.addEventListener('click', () => {
   if(treePage.classList.contains('hide')) {
     treePage.classList.remove('hide');
-    if(!toysPage.classList.contains('hide')) { toysPage.classList.add('hide'); };
-    if(!startPage.classList.contains('hide')) { startPage.classList.add('hide'); };
+    treePageBtn.classList.add('active');
+    makeSlots();
+    if(!toysPage.classList.contains('hide')) { 
+      toysPage.classList.add('hide'); 
+      toysPageBtn.classList.remove('active');
+    };
+    if(!startPage.classList.contains('hide')) { 
+      startPage.classList.add('hide'); 
+      startPageBtn.classList.remove('active');
+    };
   }
 });
 

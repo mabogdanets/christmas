@@ -22,3 +22,14 @@
   line-height: 22px;
   font-size: 2rem;
 }
+.section__title {
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 7px;
+}
+.filter__title {
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 7px;
+  border-bottom: 2px solid $color-blue;
+}

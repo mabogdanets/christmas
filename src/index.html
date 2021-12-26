@@ -11,7 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header><h1 id="h1">Наряди ёлку</h1>
+  <header>
+    <h1 id="h1">Наряди ёлку</h1>
     <div class="wrapper header-wrapper">
       <nav class="header__nav">
         <ul class="nav__items">
@@ -47,7 +48,7 @@
         <button type="button" class="start-btn">Начать</button>
       </div>
     </div>
-    <div class="page toys-page">
+    <div class="page toys-page hide">
       <div class="wrapper toys-page-wrapper">
         <div class="filters">
           <div class="filter filter__property">
@@ -112,9 +113,74 @@
         </div>
       </div>
     </div>
-    <div class="page tree-page hide">
+    <div class="page tree-page">
       <div class="wrapper tree-page-wrapper">
-
+        <section class="tree-settings">
+          <div class="music-snow">
+            <span class="music"></span>
+            <span class="snow"></span>
+          </div>
+          <div class="choose-tree">
+            <h2 class="section__title">Выберите ёлку</h2>
+            <div class="tree-cards">
+              <div class="tree-card active"></div>
+              <div class="tree-card"></div>
+              <div class="tree-card"></div>
+              <div class="tree-card"></div>
+              <div class="tree-card"></div>
+              <div class="tree-card"></div>
+            </div>
+          </div>
+          <div class="choose-bg">
+            <h2 class="section__title">Выберите фон</h2>
+            <div class="bg-cards">
+              <div class="bg-card active"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+            </div>
+          </div>
+          <div class="choose-lights">
+            <h2 class="section__title">Выберите гирлянду</h2>
+            <div class="lights">
+              <span class="light light-multi active"></span>
+              <span class="light light-red"></span>
+              <span class="light light-blue"></span>
+              <span class="light light-yellow"></span>
+              <span class="light light-green"></span>
+              <input type="checkbox" name="light-switch" id="light-switch">
+            </div>
+          </div>
+        </section>
+        <section class="tree">
+          <div class="snow-block"></div>
+          <div class="lights-bloack"></div>
+          <map name="tree-map"></map>
+          <img src="./assets/tree/1.png" alt="tree">
+        </section>
+        <section class="tree-toys-settings">
+          <div class="choose-toy">
+            <h2 class="section__title">Игрушки</h2>
+            <div class="selected-toys">
+            </div>
+          </div>
+          <div class="saved-trees">
+            <h2 class="section__title">Вы нарядили</h2>
+            <div class="trees-slider">
+              <div class="saved-tree"></div>
+              <div class="saved-tree"></div>
+              <div class="saved-tree"></div>
+              
+            </div>
+          </div>
+        </section>
+        </section>
       </div>
     </div>
   </main>
