@@ -11,6 +11,7 @@ import './ts/choose-tree';
 import './ts/choose-bg';
 import './ts/snowdown';
 import './ts/tree';
+import './ts/music';
 
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');

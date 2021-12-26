@@ -22,7 +22,7 @@
   }
   &.music {
     background-image: url("/src/assets/svg/audio.svg");
-    &.active {
+    &.pause {
       background-image: url("/src/assets/svg/mute.svg");
     }
   }
