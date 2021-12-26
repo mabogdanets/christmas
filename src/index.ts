@@ -7,7 +7,10 @@ import './ts/marked';
 import './ts/search';
 import './ts/tree-toys-settings';
 import { makeSlots } from './ts/tree-toys-settings';
-import './ts/tree;'
+import './ts/choose-tree';
+import './ts/choose-bg';
+import './ts/snowdown';
+import './ts/tree';
 
 /* это работа с файлами которые могут изменяться
 const img = require('./assets/bg.jpg');
@@ -22,6 +25,8 @@ const startPageBtn = document.querySelector('.start-page-btn');
 const startBtn =  document.querySelector('.start-btn');
 const toysPageBtn = document.querySelector('.toys-page-btn');
 const treePageBtn = document.querySelector('.tree-page-btn');
+
+window.addEventListener('load', makeSlots);
 
 function gotoToys(){
   if(toysPage.classList.contains('hide')) {

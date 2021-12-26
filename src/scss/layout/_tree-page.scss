@@ -1,6 +1,6 @@
 .tree-page-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(500px, 1.5fr) 1fr;
   gap: 0.5em;
-  justify-content: center;
+ //place-items: center center;
 }

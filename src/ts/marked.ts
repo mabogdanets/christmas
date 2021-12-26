@@ -1,3 +1,4 @@
+
 import { data, Toy } from "./data";
 import { toysDiv } from "./toys";
 const markedCountSpan = document.querySelector('.marked-div__count');
