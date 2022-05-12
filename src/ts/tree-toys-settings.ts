@@ -1,11 +1,12 @@
 import { data, Toy } from "./data";
 import { selectedToys } from "./marked";
 
-const selectedToysDiv = document.querySelector('.selected-toys');
+export const selectedToysDiv = document.querySelector('.selected-toys');
 
 function makeImgToy (num: string, id: string): HTMLElement {
   const imgToy = document.createElement('img');
   imgToy.classList.add('selected-toy-img');
+  imgToy.draggable = true;
   imgToy.src=`/assets/toys/${num}.png`;
   imgToy.id = num + "-" + id;
   return imgToy;

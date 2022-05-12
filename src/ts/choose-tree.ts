@@ -1,6 +1,6 @@
 const treeCards = document.querySelector('.tree-cards');
 const treeCard = document.querySelectorAll('.tree-card') ;
-const treeImg = document.querySelector('.tree-img') as HTMLImageElement;
+export const treeImg = document.querySelector('.tree-img') as HTMLImageElement;
 
 treeCards.addEventListener('click', (event: Event) => {
   const target = event.target as HTMLElement;
@@ -16,3 +16,4 @@ treeCards.addEventListener('click', (event: Event) => {
     treeImg.src = `./assets/tree/${target.dataset.tree}.png`;
   }
 });
+
